@@ -1,8 +1,8 @@
 # @semantic-release/npm
 
-[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package.
+[**semantic-release**](https://github.com/Unity-Billal-mesloub/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package.
 
-[![Build Status](https://github.com/semantic-release/npm/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/semantic-release/npm/actions/workflows/test.yml?query=branch%3Amaster)
+[![Build Status](https://github.com/Unity-Billal-mesloub/npm/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Unity-Billal-mesloub/npm/actions/workflows/test.yml?query=branch%3Amaster)
 [![npm latest version](https://img.shields.io/npm/v/@semantic-release/npm/latest.svg)](https://www.npmjs.com/package/@semantic-release/npm)
 [![npm next version](https://img.shields.io/npm/v/@semantic-release/npm/next.svg)](https://www.npmjs.com/package/@semantic-release/npm)
 [![npm beta version](https://img.shields.io/npm/v/@semantic-release/npm/beta.svg)](https://www.npmjs.com/package/@semantic-release/npm)
@@ -26,7 +26,7 @@ $ npm install @semantic-release/npm -D
 
 ## Usage
 
-The plugin can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
+The plugin can be configured in the [**semantic-release** configuration file](https://github.com/Unity-Billal-mesloub/semantic-release/blob/main/docs/usage/configuration.md#configuration):
 
 ```json
 {
@@ -60,7 +60,7 @@ permissions:
 ```
 
 It's also worth noting that if you are using semantic-release to its fullest with a GitHub release, GitHub comments,
-and other features, then [more permissions are required](https://github.com/semantic-release/github#github-authentication) to be enabled on this job:
+and other features.
 
 ```yaml
 permissions:
@@ -111,11 +111,9 @@ See the documentation for your registry for details on how to create a token for
 
 **Note**: The `pkgRoot` directory must contain a `package.json`. The version will be updated only in the `package.json` and `npm-shrinkwrap.json` within the `pkgRoot` directory.
 
-**Note**: If you use a [shareable configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/shareable-configurations.md#shareable-configurations) that defines one of these options you can set it to `false` in your [**semantic-release** configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration) in order to use the default value.
+**Note**: If you use a [shareable configuration](https://github.com/Unity-Billal-mesloub/semantic-release/blob/main/docs/usage/shareable-configurations.md#shareable-configurations) that defines one of these options you can set it to `false` in your [**semantic-release** configuration](https://github.com/Unity-Billal-mesloub/semantic-release/blob/main/docs/usage/configuration.md#configuration) in order to use the default value.
 
 ### npm configuration
-
-The plugin uses the [`npm` CLI](https://github.com/npm/cli) which will read the configuration from [`.npmrc`](https://docs.npmjs.com/files/npmrc). See [`npm config`](https://docs.npmjs.com/misc/config) for the option list.
 
 The [`registry`](https://docs.npmjs.com/misc/registry) can be configured via the npm environment variable `NPM_CONFIG_REGISTRY` and will take precedence over the configuration in `.npmrc`.
 
@@ -135,10 +133,6 @@ The [`registry`](https://docs.npmjs.com/misc/registry), [`dist-tag`](https://doc
 
 - The presence of an `.npmrc` file will override any specified environment variables.
 - The presence of `registry` or `dist-tag` under `publishConfig` in the `package.json` will take precedence over the configuration in `.npmrc` and `NPM_CONFIG_REGISTRY`
-
-### Examples
-
-The `npmPublish` and `tarballDir` option can be used to skip the publishing to the `npm` registry and instead, release the package tarball with another plugin. For example with the [@semantic-release/github](https://github.com/semantic-release/github) plugin:
 
 ```json
 {
@@ -162,7 +156,7 @@ The `npmPublish` and `tarballDir` option can be used to skip the publishing to t
 }
 ```
 
-When publishing from a sub-directory with the `pkgRoot` option, the `package.json` and `npm-shrinkwrap.json` updated with the new version can be moved to another directory with a `postversion`. For example with the [@semantic-release/git](https://github.com/semantic-release/git) plugin:
+When publishing from a sub-directory with the `pkgRoot` option, the `package.json` and `npm-shrinkwrap.json` updated with the new version can be moved to another directory with a `postversion`. For example with the [@semantic-release/git](https://github.com/Unity-Billal-mesloub/git) plugin:
 
 ```json
 {
